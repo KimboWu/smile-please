@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff5e9">
+  <meta name="description" content="拍好沒？三套造型、六種表情的輕鬆手機拍照小遊戲。">
+  <title>拍好沒？｜Smile, Please!</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="screen active" id="start-screen" aria-labelledby="game-title">
+      <div class="start-main">
+        <div class="intro">
+          <p class="intro-eyebrow">SMILE, PLEASE!</p>
+          <h1 id="game-title">拍好沒？</h1>
+          <p class="intro-tagline">每個表情，都值得留念。</p>
+        </div>
+        <div class="cover"><div class="cover-cast" id="cover-cast"></div><div class="cover-label">📸 來拍一張吧！</div></div>
+        <div class="howto"><strong>玩法很簡單</strong><span>點擊角色鎖住表情，30 秒內按下快門！</span></div>
+      </div>
+      <div class="start-actions"><button type="button" class="bigbutton" id="start-btn">開始拍照 →</button></div>
+    </section>
+
+    <section class="screen" id="game-screen" aria-label="遊戲畫面">
+      <div class="topline"><div class="brand"><span class="brand-dot"></span> SMILE, PLEASE!</div><div class="game-tools"><button type="button" class="iconbutton" id="sound-btn" aria-label="切換音效">🔊</button><button type="button" class="secondary" id="back-btn" style="padding:8px 10px;font-size:12px">返回選單</button></div></div>
+      <div class="game-header"><h2>大家看鏡頭！</h2><div class="timer" id="timer">00:30</div></div>
+      <p class="game-caption">六種表情，想拍哪種由你決定</p>
+      <div class="photo-stage"><div class="stage-banner">✦ PHOTO STUDIO ✦</div><div class="characters" id="live-cast"></div><div class="scene-caption">點一下就能鎖住當下表情</div></div>
+      <div class="game-bottom"><div class="progress-header"><span>已鎖定的表情</span><span id="locked-count">0 / 3</span></div><div class="progress-track"><span id="progress-fill"></span></div><button type="button" class="shutter" id="shutter-btn" aria-label="拍照"><span>📷</span></button><div class="feedback" id="feedback" aria-live="polite">點擊角色，鎖住喜歡的表情！</div></div>
+    </section>
+
+    <section class="screen" id="result-screen" aria-labelledby="result-heading">
+      <div class="topline"><div class="brand"><span class="brand-dot"></span> PHOTO ALBUM</div><span class="pill" id="result-status">拍攝完成</span></div>
+      <div class="result-main"><div class="result-title"><div class="stars" id="result-stars">☆☆☆</div><h2 id="result-heading">好照片！</h2><p class="subheading" id="result-subheading"></p></div><div class="polaroid" id="result-polaroid"><div class="polaroid-inside"><div class="characters" id="result-cast"></div></div><div class="polaroid-date">SMILE, PLEASE! ♡</div></div><p class="result-msg" id="result-msg"></p><div class="result-actions"><button type="button" class="bigbutton" id="again-btn">再拍一張 ↻</button><button type="button" class="secondary" id="home-btn">返回主選單</button></div></div>
+      <p class="footnote">每張合照，都是獨一無二的回憶 ♡</p>
+    </section>
+    <div class="flash" id="flash" aria-hidden="true"></div>
+  </main>
+  <script src="js/game.js" defer></script>
+</body>
+</html>
